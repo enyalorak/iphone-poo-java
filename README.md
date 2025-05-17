@@ -1,18 +1,69 @@
-## Getting Started
+# 📱 Projeto iPhone - Desafio DIO
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este repositório contém a implementação do desafio proposto pela plataforma **DIO**, com foco em aplicar os conceitos de **Programação Orientada a Objetos (POO)**, **interfaces**, **modelagem UML** e **Java**.
 
-## Folder Structure
+O objetivo é simular as funcionalidades básicas do iPhone original, apresentado como:  
+- Reprodutor Musical  
+- Aparelho Telefônico  
+- Navegador de Internet  
 
-The workspace contains two folders by default, where:
+---
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## 🎯 Funcionalidades Modeladas
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### Reprodutor Musical
+- `tocar()`
+- `pausar()`
+- `selecionarMusica(String musica)`
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+### Aparelho Telefônico
+- `ligar(String numero)`
+- `atender()`
+- `iniciarCorreioVoz()`
 
-## Dependency Management
+### Navegador de Internet
+- `exibirPagina(String url)`
+- `adicionarNovaAba()`
+- `atualizarPagina()`
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+---
+
+## 🧱 Diagrama UML
+
+```mermaid
+classDiagram
+    class ReprodutorMusical {
+        +tocar()
+        +pausar()
+        +selecionarMusica(musica: String)
+    }
+
+    class AparelhoTelefonico {
+        +ligar(numero: String)
+        +atender()
+        +iniciarCorreioVoz()
+    }
+
+    class NavegadorInternet {
+        +exibirPagina(url: String)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+
+    class iPhone {
+        +tocar()
+        +pausar()
+        +selecionarMusica(musica: String)
+        +ligar(numero: String)
+        +atender()
+        +iniciarCorreioVoz()
+        +exibirPagina(url: String)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+
+    iPhone --> ReprodutorMusical
+    iPhone --> AparelhoTelefonico
+    iPhone --> NavegadorInternet
+
+
